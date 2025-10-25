@@ -20,10 +20,17 @@ export default function TaskCard({ task, level = 0, onViewDetails }: TaskCardPro
   const completedSubtasks = task.subtasks?.filter((st: Task) => st.status === "done").length || 0;
   const totalSubtasks = task.subtasks?.length || 0;
 
+  const handleCardClick = () => {
+    if (hasSubtasks) {
+      setIsExpanded(!isExpanded);
+    }
+  };
+
   return (
     <div>
       <Card 
-        className={`p-4 hover-elevate ${level > 0 ? 'ml-8' : ''}`}
+        className={`p-4 hover-elevate cursor-pointer ${level > 0 ? 'ml-8' : ''}`}
+        onClick={handleCardClick}
         data-testid={`card-task-${task.id}`}
       >
         <div className="flex gap-4">
@@ -43,23 +50,19 @@ export default function TaskCard({ task, level = 0, onViewDetails }: TaskCardPro
                   {task.id}
                 </code>
                 <h3 className="font-medium" data-testid={`text-task-title-${task.id}`}>{task.title}</h3>
+                {hasSubtasks && (
+                  <ChevronRight className={`h-4 w-4 transition-transform text-muted-foreground ${isExpanded ? 'rotate-90' : ''}`} />
+                )}
               </div>
               
               <div className="flex items-center gap-2">
-                {hasSubtasks && (
-                  <Button
-                    size="icon"
-                    variant="ghost"
-                    onClick={() => setIsExpanded(!isExpanded)}
-                    data-testid={`button-expand-${task.id}`}
-                  >
-                    <ChevronRight className={`h-4 w-4 transition-transform ${isExpanded ? 'rotate-90' : ''}`} />
-                  </Button>
-                )}
                 <Button
                   size="icon"
                   variant="ghost"
-                  onClick={() => onViewDetails(task)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onViewDetails(task);
+                  }}
                   data-testid={`button-view-${task.id}`}
                 >
                   <Eye className="h-4 w-4" />

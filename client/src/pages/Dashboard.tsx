@@ -6,6 +6,8 @@ import IssueCard from "@/components/IssueCard";
 import IssueForm from "@/components/IssueForm";
 import TaskDetailModal from "@/components/TaskDetailModal";
 import SearchFilter from "@/components/SearchFilter";
+import ThemeToggle from "@/components/ThemeToggle";
+import AgentChatBox from "@/components/AgentChatBox";
 import { type Task, type Issue, type InsertIssue, type TaskStatus, type TaskPriority } from "@shared/schema";
 
 //todo: remove mock functionality
@@ -177,27 +179,33 @@ export default function Dashboard() {
 
   return (
     <div className="h-screen flex flex-col bg-background">
-      <header className="sticky top-0 z-10 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header className="sticky top-0 z-10 border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60">
         <div className="flex items-center justify-between gap-4 p-4 max-w-screen-2xl mx-auto">
           <div className="flex items-center gap-4">
-            <h1 className="text-2xl font-semibold" data-testid="text-app-title">
+            <h1 className="text-2xl font-semibold text-primary" data-testid="text-app-title">
               TaskMaster
             </h1>
           </div>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={handleRefresh}
-            data-testid="button-refresh"
-          >
-            <RefreshCw className="h-4 w-4 mr-2" />
-            Refresh
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={handleRefresh}
+              data-testid="button-refresh"
+            >
+              <RefreshCw className="h-4 w-4 mr-2" />
+              Refresh
+            </Button>
+            <ThemeToggle />
+          </div>
         </div>
       </header>
 
       <div className="flex-1 overflow-hidden">
-        <div className="h-full max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-6 p-4 md:p-8">
+        <div className="h-full max-w-screen-2xl mx-auto flex flex-col gap-4 p-4 md:p-6">
+          <AgentChatBox />
+          
+          <div className="flex-1 overflow-hidden grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-6">
           <div className="flex flex-col gap-6 overflow-hidden">
             <div className="space-y-4">
               <h2 className="text-xl font-semibold">Tasks</h2>
@@ -250,6 +258,7 @@ export default function Dashboard() {
                 />
               ))}
             </div>
+          </div>
           </div>
         </div>
       </div>
