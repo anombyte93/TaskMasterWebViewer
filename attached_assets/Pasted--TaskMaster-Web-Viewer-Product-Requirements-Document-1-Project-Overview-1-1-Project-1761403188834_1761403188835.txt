@@ -1,0 +1,277 @@
+# TaskMaster Web Viewer - Product Requirements Document
+
+## 1. Project Overview
+
+### 1.1 Project Name
+TaskMaster Web Viewer
+
+### 1.2 Purpose
+A web application that provides a user-friendly interface for viewing and managing TaskMaster tasks and issues, making it easier to track project progress without relying solely on CLI commands.
+
+### 1.3 Target Users
+- Developers working with TaskMaster
+- Project managers monitoring task completion
+- Team members who prefer visual interfaces over CLI
+
+## 2. Core Requirements
+
+### 2.1 Task Visualization
+
+#### 2.1.1 Main Task Display
+- Display all main tasks from `.taskmaster/tasks/tasks.json`
+- Show task metadata:
+  - Task ID
+  - Title
+  - Description
+  - Status (pending, in-progress, done, blocked, deferred, cancelled)
+  - Priority (high, medium, low)
+  - Dependencies
+
+#### 2.1.2 Subtask Hierarchy
+- Expandable/collapsible view for subtasks under each main task
+- Support nested subtask levels (e.g., 1.1, 1.1.1)
+- Visual indication of task hierarchy (indentation, tree structure)
+- Display subtask metadata similar to main tasks
+
+#### 2.1.3 Task Status Indicators
+- Color-coded status badges:
+  - Pending: Gray/Blue
+  - In Progress: Yellow/Orange
+  - Done: Green
+  - Blocked: Red
+  - Deferred: Purple
+  - Cancelled: Dark Gray
+- Progress bars showing completion percentage for tasks with subtasks
+
+### 2.2 Issues Management
+
+#### 2.2.1 Issues Display Area
+- Separate section/panel for displaying issues from `.taskmaster/issues/`
+- Link issues to specific tasks when applicable
+- Display issue metadata:
+  - Issue ID
+  - Title
+  - Description
+  - Severity (critical, high, medium, low)
+  - Status (open, in-progress, resolved)
+  - Related task ID (if applicable)
+
+#### 2.2.2 Issue Creation
+- Form to add new issues
+- Fields:
+  - Title (required)
+  - Description (required)
+  - Severity dropdown
+  - Related Task ID (optional, with autocomplete)
+  - Tags (optional)
+- Save issues to `.taskmaster/issues/` directory as JSON files
+
+### 2.3 Data Management
+
+#### 2.3.1 Data Source
+- Read-only access to `tasks.json` for task data
+- Read/write access to `.taskmaster/issues/` directory
+
+#### 2.3.2 Real-time Updates
+- Auto-refresh or manual refresh button to reload task data
+- Watch for file system changes (optional, phase 2)
+
+## 3. Technical Requirements
+
+### 3.1 Technology Stack (Recommended)
+- **Frontend Framework**: React, Vue.js, or Svelte
+- **Backend**: Node.js with Express (minimal API server)
+- **Styling**: Tailwind CSS or similar modern CSS framework
+- **File I/O**: Node.js fs module for reading tasks.json and issues
+
+### 3.2 Architecture
+- Single-page application (SPA)
+- RESTful API endpoints:
+  - `GET /api/tasks` - Retrieve all tasks
+  - `GET /api/tasks/:id` - Retrieve specific task
+  - `GET /api/issues` - Retrieve all issues
+  - `POST /api/issues` - Create new issue
+  - `PUT /api/issues/:id` - Update issue
+  - `DELETE /api/issues/:id` - Delete issue
+
+### 3.3 File Structure
+```
+taskmaster-web-viewer/
+├── backend/
+│   ├── src/
+│   │   ├── routes/
+│   │   │   ├── tasks.js
+│   │   │   └── issues.js
+│   │   ├── utils/
+│   │   │   └── fileReader.js
+│   │   └── server.js
+│   └── package.json
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── TaskList.jsx
+│   │   │   ├── TaskItem.jsx
+│   │   │   ├── SubtaskItem.jsx
+│   │   │   ├── IssuesList.jsx
+│   │   │   └── IssueForm.jsx
+│   │   ├── App.jsx
+│   │   └── index.js
+│   └── package.json
+└── README.md
+```
+
+## 4. User Interface Requirements
+
+### 4.1 Layout
+- Two-column layout:
+  - Left: Task hierarchy (70% width)
+  - Right: Issues panel (30% width)
+- Responsive design for mobile/tablet viewing
+
+### 4.2 Navigation
+- Search/filter functionality:
+  - Filter by status
+  - Filter by priority
+  - Search by title/description
+- Breadcrumb navigation for nested subtasks
+
+### 4.3 Interactions
+- Click to expand/collapse subtasks
+- Click task/subtask to view full details in modal or side panel
+- Hover tooltips for truncated text
+- Quick action buttons (view details, filter related issues)
+
+## 5. Phase 1 (MVP) Features
+
+### Must Have
+- Display tasks from tasks.json
+- Expandable subtask hierarchy
+- Status indicators
+- Basic issues display
+- Issue creation form
+- Search/filter tasks by status
+
+### Should Have
+- Task detail modal
+- Color-coded priority indicators
+- Responsive mobile view
+
+### Nice to Have
+- Dark mode toggle
+- Export tasks/issues to CSV
+- Task completion statistics dashboard
+
+## 6. Phase 2 (Future Enhancements)
+
+### Extendable Features
+- Real-time file watching for auto-updates
+- Issue assignment to tasks
+- Comments on issues
+- Issue attachments (screenshots, logs)
+- Integration with git commits (show related commits per task)
+- Task timeline visualization
+- Gantt chart view
+- Notification system for blocked tasks
+- User authentication for multi-user environments
+
+## 7. Data Formats
+
+### 7.1 Task Structure (from tasks.json)
+```json
+{
+  "id": 1,
+  "title": "Setup Project Structure",
+  "description": "Create basic project structure",
+  "status": "done",
+  "priority": "high",
+  "dependencies": [],
+  "subtasks": [
+    {
+      "id": 1,
+      "title": "Create Main Directory",
+      "description": "...",
+      "status": "done",
+      "dependencies": []
+    }
+  ]
+}
+```
+
+### 7.2 Issue Structure (proposed)
+```json
+{
+  "id": "issue-001",
+  "title": "API endpoint returning 500 error",
+  "description": "Users endpoint fails when...",
+  "severity": "high",
+  "status": "open",
+  "relatedTaskId": "2.3",
+  "tags": ["api", "bug"],
+  "createdAt": "2025-10-25T10:30:00Z",
+  "updatedAt": "2025-10-25T10:30:00Z"
+}
+```
+
+## 8. Success Criteria
+
+### 8.1 Functional
+- Successfully loads and displays all tasks from tasks.json
+- Correctly renders nested subtask hierarchies
+- Issues can be created and stored in .taskmaster/issues/
+- All status filters work correctly
+
+### 8.2 Performance
+- Page loads in under 2 seconds with 100+ tasks
+- Smooth expand/collapse animations
+- No lag when filtering/searching
+
+### 8.3 Usability
+- Intuitive navigation without documentation
+- Clear visual hierarchy
+- Accessible color contrast ratios (WCAG AA compliant)
+
+## 9. Non-Requirements (Out of Scope for MVP)
+
+- Task editing/modification (keep TaskMaster CLI as source of truth)
+- Task status updates from web interface
+- User authentication system
+- Real-time collaboration features
+- Mobile native applications
+- Integration with external project management tools
+
+## 10. Constraints
+
+- Must not modify tasks.json (read-only for tasks)
+- Must be lightweight and fast
+- Must work with existing TaskMaster file structure
+- Should not require additional dependencies in main TaskMaster project
+
+## 11. Deployment
+
+### 11.1 Development
+- Run locally with `npm run dev`
+- Backend on port 3001
+- Frontend on port 3000
+
+### 11.2 Production (Optional)
+- Docker container for easy deployment
+- Environment variable for `.taskmaster` path
+- Static build for frontend
+
+## 12. Testing Strategy
+
+- Unit tests for API endpoints
+- Component tests for React components
+- E2E tests for critical user flows:
+  - View tasks
+  - Expand subtasks
+  - Create issue
+  - Filter tasks
+- Manual testing for UI/UX
+
+## 13. Documentation
+
+- README with setup instructions
+- API documentation for endpoints
+- Component documentation with props
+- User guide with screenshots
