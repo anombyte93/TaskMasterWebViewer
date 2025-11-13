@@ -1,0 +1,14 @@
+{
+  "id": "issue-1762963541422-rxxiy",
+  "title": "Test Task Linking",
+  "description": "Testing relatedTaskId field",
+  "severity": "medium",
+  "status": "open",
+  "relatedTaskId": "1.1",
+  "tags": [
+    "test",
+    "linking"
+  ],
+  "createdAt": "2025-11-12T16:05:41.422Z",
+  "updatedAt": "2025-11-12T16:05:41.422Z"
+}

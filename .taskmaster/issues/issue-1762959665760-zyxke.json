@@ -1,0 +1,12 @@
+{
+  "id": "issue-1762959665760-zyxke",
+  "title": "Get By ID Test",
+  "description": "For testing get by ID",
+  "severity": "high",
+  "status": "open",
+  "tags": [
+    "get-test"
+  ],
+  "createdAt": "2025-11-12T15:01:05.760Z",
+  "updatedAt": "2025-11-12T15:01:05.760Z"
+}

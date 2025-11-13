@@ -1,0 +1,55 @@
+# Task ID: 10
+# Title: Phase 2 Days 4-5: Terminal Frontend Components
+# Status: pending
+# Dependencies: 9
+# Priority: high
+# Description: Build React components for terminal viewing with xterm.js
+# Details:
+Font: JetBrains Mono 14px. Scrollback: 10000 lines.
+
+# Test Strategy:
+Visual testing, ANSI rendering tests, interaction tests
+
+# Subtasks:
+## 1. Create TerminalViewer component [pending]
+### Dependencies: None
+### Description: Integrate xterm.js with React
+### Details:
+
+
+## 2. Apply Tokyo Night theme [pending]
+### Dependencies: 10.1
+### Description: Configure xterm.js colors to match Tokyo Night
+### Details:
+
+
+## 3. Create TerminalTabs component [pending]
+### Dependencies: 10.1
+### Description: Support multiple terminal tabs
+### Details:
+
+
+## 4. Create TerminalControls component [pending]
+### Dependencies: 10.1
+### Description: Add clear, copy, download, search buttons
+### Details:
+
+
+## 5. Create useTerminal hook [pending]
+### Dependencies: None
+### Description: Manage terminal lifecycle and state
+### Details:
+
+
+## 6. Create useWebSocket hook [pending]
+### Dependencies: None
+### Description: Handle WebSocket connection and reconnection
+### Details:
+
+
+## 7. Implement fit addon [pending]
+### Dependencies: 10.1
+### Description: Auto-resize terminal to fit container
+### Details:
+
+

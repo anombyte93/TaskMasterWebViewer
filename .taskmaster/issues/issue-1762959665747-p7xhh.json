@@ -1,0 +1,13 @@
+{
+  "id": "issue-1762959665747-p7xhh",
+  "title": "Test Issue",
+  "description": "Integration test issue",
+  "severity": "medium",
+  "status": "open",
+  "tags": [
+    "test",
+    "integration"
+  ],
+  "createdAt": "2025-11-12T15:01:05.747Z",
+  "updatedAt": "2025-11-12T15:01:05.747Z"
+}

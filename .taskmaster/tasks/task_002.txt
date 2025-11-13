@@ -1,0 +1,55 @@
+# Task ID: 2
+# Title: Phase 1 Week 1: Backend Services & API Routes
+# Status: pending
+# Dependencies: 1
+# Priority: high
+# Description: Implement TaskMasterService and IssueService with REST API endpoints
+# Details:
+Install chokidar for file watching. Follow service architecture from MASTER_IMPLEMENTATION_PLAN section 3.2.
+
+# Test Strategy:
+Unit tests for services, integration tests for API endpoints
+
+# Subtasks:
+## 1. Create TaskMasterService [pending]
+### Dependencies: None
+### Description: Implement service to read and watch tasks.json file with chokidar
+### Details:
+
+
+## 2. Create IssueService [pending]
+### Dependencies: None
+### Description: Implement CRUD operations for issues in .taskmaster/issues/ directory
+### Details:
+
+
+## 3. Implement tasks API routes [pending]
+### Dependencies: 2.1
+### Description: Create GET /api/tasks, GET /api/tasks/:id, GET /api/tasks/current endpoints
+### Details:
+
+
+## 4. Implement issues API routes [pending]
+### Dependencies: 2.2
+### Description: Create full CRUD endpoints for issues (GET, POST, PUT, DELETE)
+### Details:
+
+
+## 5. Set up error handling and logging [pending]
+### Dependencies: None
+### Description: Add middleware for error handling and request logging
+### Details:
+
+
+## 6. Write unit tests for services [pending]
+### Dependencies: 2.1, 2.2
+### Description: Test TaskMasterService and IssueService with mock data
+### Details:
+
+
+## 7. Write integration tests for API [pending]
+### Dependencies: 2.3, 2.4
+### Description: Test API endpoints with real .taskmaster directory
+### Details:
+
+

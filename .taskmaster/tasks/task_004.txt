@@ -1,0 +1,49 @@
+# Task ID: 4
+# Title: Phase 1 Week 2: Issue Tracker Components
+# Status: pending
+# Dependencies: 3
+# Priority: high
+# Description: Build React components for issue management
+# Details:
+Support markdown in descriptions. Store files in .taskmaster/issues/attachments/
+
+# Test Strategy:
+Component tests, form validation tests, file upload tests
+
+# Subtasks:
+## 1. Create IssueTracker component [pending]
+### Dependencies: None
+### Description: Issues list panel with filters and sorting
+### Details:
+
+
+## 2. Create IssueCard component [pending]
+### Dependencies: 4.1
+### Description: Individual issue card with severity indicator
+### Details:
+
+
+## 3. Create IssueForm component [pending]
+### Dependencies: None
+### Description: Create/edit form with markdown editor
+### Details:
+
+
+## 4. Create SeverityBadge component [pending]
+### Dependencies: None
+### Description: Severity levels: critical, high, medium, low
+### Details:
+
+
+## 5. Implement issue-task linking [pending]
+### Dependencies: 4.2, 4.3
+### Description: Link issues to tasks via relatedTaskId field
+### Details:
+
+
+## 6. Add attachment support [pending]
+### Dependencies: 4.3
+### Description: Upload and display screenshots/logs in issues
+### Details:
+
+

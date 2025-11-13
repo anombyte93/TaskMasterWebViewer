@@ -1,0 +1,73 @@
+# Task ID: 3
+# Title: Phase 1 Week 2: Layout & Task Components
+# Status: pending
+# Dependencies: 2
+# Priority: high
+# Description: Build React components for layout and task visualization
+# Details:
+Follow design_guidelines.md for spacing, typography, and colors. Use Tokyo Night theme.
+
+# Test Strategy:
+Component tests with React Testing Library, visual testing in Storybook
+
+# Subtasks:
+## 1. Create Header component [pending]
+### Dependencies: None
+### Description: Top navigation with search, filters, and refresh button
+### Details:
+
+
+## 2. Create Sidebar component [pending]
+### Dependencies: None
+### Description: Right panel container for issues (20-30% width)
+### Details:
+
+
+## 3. Create MainLayout component [pending]
+### Dependencies: 3.1, 3.2
+### Description: Two-column responsive layout (70/30 split)
+### Details:
+
+
+## 4. Create TaskList component [pending]
+### Dependencies: 3.3
+### Description: Main list container with virtual scrolling for performance
+### Details:
+
+
+## 5. Create TaskCard component [pending]
+### Dependencies: 3.4
+### Description: Individual task card with expand/collapse for subtasks
+### Details:
+
+
+## 6. Create StatusBadge component [pending]
+### Dependencies: None
+### Description: Color-coded status indicators matching design system
+### Details:
+
+
+## 7. Create PriorityBadge component [pending]
+### Dependencies: None
+### Description: Priority display following Linear design patterns
+### Details:
+
+
+## 8. Create ProgressBar component [pending]
+### Dependencies: None
+### Description: Subtask completion progress with percentage
+### Details:
+
+
+## 9. Create TaskDetail modal [pending]
+### Dependencies: 3.5
+### Description: Full task information modal with subtask tree
+### Details:
+
+
+## 10. Connect components to API with React Query [pending]
+### Dependencies: 3.4, 3.5, 3.9
+### Description: Implement data fetching and state management
+### Details:
+
+

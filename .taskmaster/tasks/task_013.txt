@@ -1,0 +1,61 @@
+# Task ID: 13
+# Title: Phase 3 Week 5-6: Git Dashboard Integration
+# Status: pending
+# Dependencies: 12
+# Priority: medium
+# Description: Implement git status, commits, and diff viewing
+# Details:
+Sidebar panel with tabs. Poll git status every 2-3 seconds.
+
+# Test Strategy:
+Test with real git repos, verify status accuracy
+
+# Subtasks:
+## 1. Install simple-git dependency [pending]
+### Dependencies: None
+### Description: Add simple-git package for git operations
+### Details:
+
+
+## 2. Create GitService [pending]
+### Dependencies: 13.1
+### Description: Implement git status, commits, and diff retrieval
+### Details:
+
+
+## 3. Create git API endpoints [pending]
+### Dependencies: 13.2
+### Description: GET /api/git/status, /api/git/commits, /api/git/diff
+### Details:
+
+
+## 4. Create GitDashboard component [pending]
+### Dependencies: None
+### Description: Main git panel in sidebar
+### Details:
+
+
+## 5. Create GitStatus component [pending]
+### Dependencies: 13.4
+### Description: Show branch, ahead/behind, changes count
+### Details:
+
+
+## 6. Create CommitHistory component [pending]
+### Dependencies: 13.4
+### Description: Display recent commits with details
+### Details:
+
+
+## 7. Implement diff viewer [pending]
+### Dependencies: None
+### Description: Show file diffs in modal
+### Details:
+
+
+## 8. Add real-time git status updates [pending]
+### Dependencies: 13.5
+### Description: Update git status within 1s of file changes
+### Details:
+
+

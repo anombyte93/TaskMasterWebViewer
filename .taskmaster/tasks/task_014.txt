@@ -1,0 +1,67 @@
+# Task ID: 14
+# Title: Phase 3 Week 6-7: MCP Server Manager
+# Status: pending
+# Dependencies: 13
+# Priority: medium
+# Description: Implement MCP server discovery, status, and management
+# Details:
+Sidebar panel with tabs. Auto-refresh status every 5 seconds.
+
+# Test Strategy:
+Test with multiple MCP servers, verify start/stop functionality
+
+# Subtasks:
+## 1. Create MCPService [pending]
+### Dependencies: None
+### Description: Read .mcp.json and manage server processes
+### Details:
+
+
+## 2. Implement server status checking [pending]
+### Dependencies: 14.1
+### Description: Check if MCP server processes are running
+### Details:
+
+
+## 3. Implement server start/stop [pending]
+### Dependencies: 14.1
+### Description: Spawn and kill MCP server child processes
+### Details:
+
+
+## 4. Implement tool discovery [pending]
+### Dependencies: 14.1
+### Description: Query MCP servers for available tools
+### Details:
+
+
+## 5. Create MCP API endpoints [pending]
+### Dependencies: 14.1
+### Description: GET /api/mcp/servers, POST /api/mcp/servers/:name/start
+### Details:
+
+
+## 6. Create MCPManager component [pending]
+### Dependencies: None
+### Description: List of all MCP servers with status
+### Details:
+
+
+## 7. Create ServerCard component [pending]
+### Dependencies: 14.6
+### Description: Individual server with status and actions
+### Details:
+
+
+## 8. Create ToolsList modal [pending]
+### Dependencies: None
+### Description: Show all tools provided by a server
+### Details:
+
+
+## 9. Implement server logs viewer [pending]
+### Dependencies: None
+### Description: Stream and display server logs
+### Details:
+
+

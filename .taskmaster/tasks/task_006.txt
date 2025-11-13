@@ -1,0 +1,43 @@
+# Task ID: 6
+# Title: Phase 1 Week 3: Responsive Design & Mobile
+# Status: pending
+# Dependencies: 3, 4, 5
+# Priority: high
+# Description: Implement responsive layouts for tablet and mobile devices
+# Details:
+Breakpoints: mobile <768px, tablet 768-1023px, desktop >1024px
+
+# Test Strategy:
+Manual testing on multiple devices, responsive design tests
+
+# Subtasks:
+## 1. Implement mobile layout [pending]
+### Dependencies: None
+### Description: Single column stack with tasks first, then issues
+### Details:
+
+
+## 2. Implement tablet layout [pending]
+### Dependencies: None
+### Description: Collapsible sidebar for issues panel
+### Details:
+
+
+## 3. Add touch-friendly interactions [pending]
+### Dependencies: 6.1
+### Description: Larger tap targets, swipe gestures
+### Details:
+
+
+## 4. Optimize for performance [pending]
+### Dependencies: None
+### Description: Lazy loading, code splitting, image optimization
+### Details:
+
+
+## 5. Test on real devices [pending]
+### Dependencies: 6.1, 6.2, 6.3
+### Description: iOS Safari, Android Chrome, tablets
+### Details:
+
+

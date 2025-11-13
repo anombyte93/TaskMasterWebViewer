@@ -1,0 +1,49 @@
+# Task ID: 11
+# Title: Phase 2 Days 6-7: Terminal Integration & Testing
+# Status: pending
+# Dependencies: 10
+# Priority: high
+# Description: Integrate terminal into main layout and perform comprehensive testing
+# Details:
+Phase 2 milestone: Real-time terminal streaming
+
+# Test Strategy:
+Performance benchmarks, latency testing, stability tests
+
+# Subtasks:
+## 1. Update layout for terminal [pending]
+### Dependencies: None
+### Description: Add terminal to center panel (60% width)
+### Details:
+
+
+## 2. Implement watch/interactive mode toggle [pending]
+### Dependencies: None
+### Description: Switch between read-only and interactive modes
+### Details:
+
+
+## 3. Test terminal performance [pending]
+### Dependencies: None
+### Description: Verify handles 1000+ lines without lag
+### Details:
+
+
+## 4. Test terminal latency [pending]
+### Dependencies: None
+### Description: Measure and optimize to < 100ms
+### Details:
+
+
+## 5. Test session persistence [pending]
+### Dependencies: None
+### Description: Verify reconnection after page refresh
+### Details:
+
+
+## 6. Deploy Phase 2 to Replit [pending]
+### Dependencies: 11.3, 11.4, 11.5
+### Description: Ship terminal viewer feature
+### Details:
+
+

@@ -1,0 +1,43 @@
+# Task ID: 17
+# Title: Phase 3: Deploy Full Dashboard & Ship v1.0
+# Status: pending
+# Dependencies: 16
+# Priority: high
+# Description: Deploy complete dashboard to production
+# Details:
+Phase 3 milestone: Complete IDE replacement dashboard
+
+# Test Strategy:
+Production smoke tests, rollback plan prepared
+
+# Subtasks:
+## 1. Final production testing [pending]
+### Dependencies: None
+### Description: Smoke tests on all features in production environment
+### Details:
+
+
+## 2. Create Docker image [pending]
+### Dependencies: None
+### Description: Build and test Docker container
+### Details:
+
+
+## 3. Deploy to Replit [pending]
+### Dependencies: None
+### Description: Update production deployment with all features
+### Details:
+
+
+## 4. Tag v1.0 release [pending]
+### Dependencies: 17.3
+### Description: Create git tag and GitHub release
+### Details:
+
+
+## 5. Announce v1.0 release [pending]
+### Dependencies: 17.4
+### Description: Share with community, gather feedback
+### Details:
+
+

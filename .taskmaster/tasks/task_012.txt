@@ -1,0 +1,61 @@
+# Task ID: 12
+# Title: Phase 3 Week 5: File Tree Navigation
+# Status: pending
+# Dependencies: 11
+# Priority: medium
+# Description: Implement file tree with git status and navigation
+# Details:
+Left panel, 20% width. Lazy load directories.
+
+# Test Strategy:
+Performance testing with large repos, file watching tests
+
+# Subtasks:
+## 1. Install file system dependencies [pending]
+### Dependencies: None
+### Description: Install chokidar for file watching
+### Details:
+
+
+## 2. Create FileService [pending]
+### Dependencies: 12.1
+### Description: Implement recursive directory traversal
+### Details:
+
+
+## 3. Add file watching [pending]
+### Dependencies: 12.2
+### Description: Watch for file system changes with chokidar
+### Details:
+
+
+## 4. Create FileTree component [pending]
+### Dependencies: None
+### Description: Recursive tree with expand/collapse
+### Details:
+
+
+## 5. Create FileNode component [pending]
+### Dependencies: 12.4
+### Description: Individual file/folder with icons
+### Details:
+
+
+## 6. Add virtual scrolling [pending]
+### Dependencies: 12.4
+### Description: Support 10,000+ files with @tanstack/react-virtual
+### Details:
+
+
+## 7. Create FileSearch component [pending]
+### Dependencies: None
+### Description: Fuzzy file search (Ctrl+P style)
+### Details:
+
+
+## 8. Integrate git status indicators [pending]
+### Dependencies: 12.5
+### Description: Show modified/untracked/staged status on files
+### Details:
+
+

@@ -1,0 +1,11 @@
+{
+  "id": "issue-1762959665776-eu1t1",
+  "title": "Task Related Issue",
+  "description": "Related to task 1",
+  "severity": "high",
+  "status": "open",
+  "relatedTaskId": "1",
+  "tags": [],
+  "createdAt": "2025-11-12T15:01:05.776Z",
+  "updatedAt": "2025-11-12T15:01:05.776Z"
+}

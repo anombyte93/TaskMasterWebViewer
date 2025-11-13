@@ -1,0 +1,49 @@
+# Task ID: 15
+# Title: Phase 3 Week 7: Three-Panel Layout Integration
+# Status: pending
+# Dependencies: 12, 13, 14
+# Priority: high
+# Description: Integrate file tree, terminal, and sidebar into cohesive layout
+# Details:
+Use react-resizable-panels for panel management
+
+# Test Strategy:
+Visual testing, usability testing, responsive design tests
+
+# Subtasks:
+## 1. Update MainLayout for three panels [pending]
+### Dependencies: None
+### Description: 20% file tree | 60% terminal | 20% sidebar
+### Details:
+
+
+## 2. Add panel resizing [pending]
+### Dependencies: 15.1
+### Description: Allow users to resize panels with drag handles
+### Details:
+
+
+## 3. Implement sidebar tabs [pending]
+### Dependencies: None
+### Description: Switch between Git, MCP, Issues, Tasks in sidebar
+### Details:
+
+
+## 4. Add panel collapse/expand [pending]
+### Dependencies: 15.1
+### Description: Toggle panels to maximize workspace
+### Details:
+
+
+## 5. Update responsive behavior [pending]
+### Dependencies: 15.1
+### Description: Handle three panels on tablet/mobile
+### Details:
+
+
+## 6. Test layout on all screen sizes [pending]
+### Dependencies: 15.5
+### Description: Verify usability on desktop, tablet, mobile
+### Details:
+
+

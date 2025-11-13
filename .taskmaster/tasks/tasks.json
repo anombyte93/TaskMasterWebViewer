@@ -1,0 +1,1294 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Phase 0: Project Setup & Environment Configuration",
+        "description": "Set up development environment, install dependencies, and configure project settings",
+        "status": "done",
+        "priority": "high",
+        "dependencies": [],
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Configure environment variables",
+            "description": "Create .env file from .env.example and set PROJECT_ROOT",
+            "status": "done",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 2,
+            "title": "Initialize TaskMaster project structure",
+            "description": "Run task-master init to create .taskmaster directory",
+            "status": "done",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Verify build infrastructure",
+            "description": "Confirm React, TypeScript, Vite, Express, Tailwind are working",
+            "status": "done",
+            "dependencies": [],
+            "parentId": "undefined"
+          }
+        ],
+        "testStrategy": "Manual verification of setup",
+        "details": "Project infrastructure is complete and ready for Phase 1 implementation."
+      },
+      {
+        "id": 2,
+        "title": "Phase 1 Week 1: Backend Services & API Routes",
+        "description": "Implement TaskMasterService and IssueService with REST API endpoints",
+        "status": "done",
+        "priority": "high",
+        "dependencies": [
+          "1"
+        ],
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create TaskMasterService",
+            "description": "Implement service to read and watch tasks.json file with chokidar",
+            "status": "done",
+            "dependencies": [],
+            "updatedAt": "2025-11-12T15:05:24.646Z",
+            "parentId": "undefined"
+          },
+          {
+            "id": 2,
+            "title": "Create IssueService",
+            "description": "Implement CRUD operations for issues in .taskmaster/issues/ directory",
+            "status": "done",
+            "dependencies": [],
+            "parentId": "undefined",
+            "updatedAt": "2025-11-12T15:05:26.142Z"
+          },
+          {
+            "id": 3,
+            "title": "Implement tasks API routes",
+            "description": "Create GET /api/tasks, GET /api/tasks/:id, GET /api/tasks/current endpoints",
+            "status": "done",
+            "dependencies": [
+              1
+            ],
+            "parentId": "undefined",
+            "updatedAt": "2025-11-12T15:05:27.585Z"
+          },
+          {
+            "id": 4,
+            "title": "Implement issues API routes",
+            "description": "Create full CRUD endpoints for issues (GET, POST, PUT, DELETE)",
+            "status": "done",
+            "dependencies": [
+              2
+            ],
+            "parentId": "undefined",
+            "updatedAt": "2025-11-12T15:05:28.992Z"
+          },
+          {
+            "id": 5,
+            "title": "Set up error handling and logging",
+            "description": "Add middleware for error handling and request logging",
+            "status": "done",
+            "dependencies": [],
+            "parentId": "undefined",
+            "updatedAt": "2025-11-12T15:05:30.481Z"
+          },
+          {
+            "id": 6,
+            "title": "Write unit tests for services",
+            "description": "Test TaskMasterService and IssueService with mock data",
+            "status": "done",
+            "dependencies": [
+              1,
+              2
+            ],
+            "parentId": "undefined",
+            "updatedAt": "2025-11-12T15:05:31.892Z"
+          },
+          {
+            "id": 7,
+            "title": "Write integration tests for API",
+            "description": "Test API endpoints with real .taskmaster directory",
+            "status": "done",
+            "dependencies": [
+              3,
+              4
+            ],
+            "parentId": "undefined",
+            "updatedAt": "2025-11-12T15:05:33.367Z"
+          }
+        ],
+        "testStrategy": "Unit tests for services, integration tests for API endpoints",
+        "details": "Install chokidar for file watching. Follow service architecture from MASTER_IMPLEMENTATION_PLAN section 3.2.",
+        "updatedAt": "2025-11-12T15:05:33.367Z"
+      },
+      {
+        "id": 3,
+        "title": "Phase 1 Week 2: Layout & Task Components",
+        "description": "Build React components for layout and task visualization",
+        "status": "done",
+        "priority": "high",
+        "dependencies": [
+          "2"
+        ],
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create Header component",
+            "description": "Top navigation with search, filters, and refresh button",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 2,
+            "title": "Create Sidebar component",
+            "description": "Right panel container for issues (20-30% width)",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Create MainLayout component",
+            "description": "Two-column responsive layout (70/30 split)",
+            "status": "pending",
+            "dependencies": [
+              1,
+              2
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 4,
+            "title": "Create TaskList component",
+            "description": "Main list container with virtual scrolling for performance",
+            "status": "pending",
+            "dependencies": [
+              3
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 5,
+            "title": "Create TaskCard component",
+            "description": "Individual task card with expand/collapse for subtasks",
+            "status": "pending",
+            "dependencies": [
+              4
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 6,
+            "title": "Create StatusBadge component",
+            "description": "Color-coded status indicators matching design system",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 7,
+            "title": "Create PriorityBadge component",
+            "description": "Priority display following Linear design patterns",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 8,
+            "title": "Create ProgressBar component",
+            "description": "Subtask completion progress with percentage",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 9,
+            "title": "Create TaskDetail modal",
+            "description": "Full task information modal with subtask tree",
+            "status": "pending",
+            "dependencies": [
+              5
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 10,
+            "title": "Connect components to API with React Query",
+            "description": "Implement data fetching and state management",
+            "status": "pending",
+            "dependencies": [
+              4,
+              5,
+              9
+            ],
+            "parentId": "undefined"
+          }
+        ],
+        "testStrategy": "Component tests with React Testing Library, visual testing in Storybook",
+        "details": "Follow design_guidelines.md for spacing, typography, and colors. Use Tokyo Night theme.",
+        "updatedAt": "2025-11-12T15:46:49.080Z"
+      },
+      {
+        "id": 4,
+        "title": "Phase 1 Week 2: Issue Tracker Components",
+        "description": "Build React components for issue management",
+        "status": "done",
+        "priority": "high",
+        "dependencies": [
+          "3"
+        ],
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create IssueTracker component",
+            "description": "Issues list panel with filters and sorting",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 2,
+            "title": "Create IssueCard component",
+            "description": "Individual issue card with severity indicator",
+            "status": "pending",
+            "dependencies": [
+              1
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Create IssueForm component",
+            "description": "Create/edit form with markdown editor",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 4,
+            "title": "Create SeverityBadge component",
+            "description": "Severity levels: critical, high, medium, low",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 5,
+            "title": "Implement issue-task linking",
+            "description": "Link issues to tasks via relatedTaskId field",
+            "status": "pending",
+            "dependencies": [
+              2,
+              3
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 6,
+            "title": "Add attachment support",
+            "description": "Upload and display screenshots/logs in issues",
+            "status": "pending",
+            "dependencies": [
+              3
+            ],
+            "parentId": "undefined"
+          }
+        ],
+        "testStrategy": "Component tests, form validation tests, file upload tests",
+        "details": "Support markdown in descriptions. Store files in .taskmaster/issues/attachments/",
+        "updatedAt": "2025-11-12T16:11:36.855Z"
+      },
+      {
+        "id": 5,
+        "title": "Phase 1 Week 2-3: Search & Filter Components",
+        "description": "Implement search and filtering functionality",
+        "status": "done",
+        "priority": "medium",
+        "dependencies": [
+          "3",
+          "4"
+        ],
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create SearchBar component",
+            "description": "Fuzzy search across task titles and descriptions",
+            "status": "done",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 2,
+            "title": "Create FilterBar component",
+            "description": "Filter by status, priority, and tags",
+            "status": "done",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Implement search logic",
+            "description": "Client-side fuzzy matching with debouncing",
+            "status": "done",
+            "dependencies": [
+              1
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 4,
+            "title": "Implement filter logic",
+            "description": "Multiple filters with AND logic",
+            "status": "done",
+            "dependencies": [
+              2
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 5,
+            "title": "Create EmptyState component",
+            "description": "Display when no results found",
+            "status": "done",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 6,
+            "title": "Optimize search performance",
+            "description": "Ensure < 300ms response time for searches",
+            "status": "done",
+            "dependencies": [
+              3,
+              4
+            ],
+            "parentId": "undefined"
+          }
+        ],
+        "testStrategy": "Performance testing with large datasets, search accuracy tests",
+        "details": "Use debouncing (300ms) for search input. Consider using Fuse.js for fuzzy search.",
+        "updatedAt": "2025-11-12T16:12:14.022Z"
+      },
+      {
+        "id": 6,
+        "title": "Phase 1 Week 3: Responsive Design & Mobile",
+        "description": "Implement responsive layouts for tablet and mobile devices",
+        "status": "done",
+        "priority": "high",
+        "dependencies": [
+          "3",
+          "4",
+          "5"
+        ],
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Implement mobile layout",
+            "description": "Single column stack with tasks first, then issues",
+            "status": "done",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 2,
+            "title": "Implement tablet layout",
+            "description": "Collapsible sidebar for issues panel",
+            "status": "done",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Add touch-friendly interactions",
+            "description": "Larger tap targets, swipe gestures",
+            "status": "done",
+            "dependencies": [
+              1
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 4,
+            "title": "Optimize for performance",
+            "description": "Lazy loading, code splitting, image optimization",
+            "status": "done",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 5,
+            "title": "Test on real devices",
+            "description": "iOS Safari, Android Chrome, tablets",
+            "status": "done",
+            "dependencies": [
+              1,
+              2,
+              3
+            ],
+            "parentId": "undefined"
+          }
+        ],
+        "testStrategy": "Manual testing on multiple devices, responsive design tests",
+        "details": "Breakpoints: mobile <768px, tablet 768-1023px, desktop >1024px"
+      },
+      {
+        "id": 7,
+        "title": "Phase 1 Week 3: Integration, Testing & Polish",
+        "description": "Final integration, comprehensive testing, and bug fixes",
+        "status": "done",
+        "priority": "high",
+        "dependencies": [
+          "6"
+        ],
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Implement real-time file watching",
+            "description": "Auto-update UI when tasks.json changes",
+            "status": "done",
+            "dependencies": [],
+            "parentId": "undefined",
+            "updatedAt": "2025-11-12T17:38:32.878Z"
+          },
+          {
+            "id": 2,
+            "title": "Add optimistic UI updates",
+            "description": "Instant feedback for issue creation/updates",
+            "status": "done",
+            "dependencies": [],
+            "parentId": "undefined",
+            "updatedAt": "2025-11-12T17:46:21.920Z"
+          },
+          {
+            "id": 3,
+            "title": "Write E2E tests",
+            "description": "Test critical user flows with Playwright",
+            "status": "done",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 4,
+            "title": "Performance testing",
+            "description": "Test with 100+ tasks, verify < 2s page load",
+            "status": "done",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 5,
+            "title": "Bug fixes and polish",
+            "description": "Fix all known issues, improve UX",
+            "status": "done",
+            "dependencies": [
+              3,
+              4
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 6,
+            "title": "Write user documentation",
+            "description": "User guide with screenshots and examples",
+            "status": "done",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 7,
+            "title": "Write API documentation",
+            "description": "Document all endpoints with examples",
+            "status": "done",
+            "dependencies": [],
+            "parentId": "undefined"
+          }
+        ],
+        "testStrategy": "E2E tests, performance benchmarks, 8-hour stability test",
+        "details": "Verify all Phase 1 success criteria before shipping",
+        "updatedAt": "2025-11-12T17:46:21.920Z"
+      },
+      {
+        "id": 8,
+        "title": "Phase 1: Deploy to Replit & Ship MVP",
+        "description": "Deploy Phase 1 to Replit and ship to users",
+        "status": "in-progress",
+        "priority": "high",
+        "dependencies": [
+          "7"
+        ],
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Configure Replit deployment",
+            "description": "Set environment variables in Replit Secrets",
+            "status": "done",
+            "dependencies": [],
+            "parentId": "undefined",
+            "updatedAt": "2025-11-12T18:45:50.311Z"
+          },
+          {
+            "id": 2,
+            "title": "Test deployment on Replit",
+            "description": "Verify all features work in production",
+            "status": "pending",
+            "dependencies": [
+              1
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Create deployment documentation",
+            "description": "Document deployment process for future updates",
+            "status": "done",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 4,
+            "title": "Announce Phase 1 release",
+            "description": "Share with users, gather feedback",
+            "status": "pending",
+            "dependencies": [
+              2
+            ],
+            "parentId": "undefined"
+          }
+        ],
+        "testStrategy": "Production deployment testing, smoke tests",
+        "details": "Phase 1 milestone: Working task viewer + issue tracker",
+        "updatedAt": "2025-11-12T18:45:50.311Z"
+      },
+      {
+        "id": 9,
+        "title": "Phase 2 Days 1-3: Terminal Backend Implementation",
+        "description": "Implement TerminalService with node-pty and WebSocket support",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          "8"
+        ],
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Install terminal dependencies",
+            "description": "Install xterm.js, node-pty, socket.io packages",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 2,
+            "title": "Create TerminalService",
+            "description": "Implement PTY session management with node-pty",
+            "status": "pending",
+            "dependencies": [
+              1
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Implement WebSocket handler",
+            "description": "Set up Socket.io for terminal streaming",
+            "status": "pending",
+            "dependencies": [
+              2
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 4,
+            "title": "Add session persistence",
+            "description": "Store session IDs for reconnection after refresh",
+            "status": "pending",
+            "dependencies": [
+              2
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 5,
+            "title": "Implement terminal API endpoints",
+            "description": "GET /api/terminal/sessions, POST /api/terminal/create",
+            "status": "pending",
+            "dependencies": [
+              2
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 6,
+            "title": "Test PTY integration",
+            "description": "Verify terminal commands execute correctly",
+            "status": "pending",
+            "dependencies": [
+              2,
+              3
+            ],
+            "parentId": "undefined"
+          }
+        ],
+        "testStrategy": "Integration tests for PTY, WebSocket message testing",
+        "details": "Use node-pty for cross-platform terminal support. Handle stdin/stdout streaming."
+      },
+      {
+        "id": 10,
+        "title": "Phase 2 Days 4-5: Terminal Frontend Components",
+        "description": "Build React components for terminal viewing with xterm.js",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          "9"
+        ],
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create TerminalViewer component",
+            "description": "Integrate xterm.js with React",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 2,
+            "title": "Apply Tokyo Night theme",
+            "description": "Configure xterm.js colors to match Tokyo Night",
+            "status": "pending",
+            "dependencies": [
+              1
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Create TerminalTabs component",
+            "description": "Support multiple terminal tabs",
+            "status": "pending",
+            "dependencies": [
+              1
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 4,
+            "title": "Create TerminalControls component",
+            "description": "Add clear, copy, download, search buttons",
+            "status": "pending",
+            "dependencies": [
+              1
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 5,
+            "title": "Create useTerminal hook",
+            "description": "Manage terminal lifecycle and state",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 6,
+            "title": "Create useWebSocket hook",
+            "description": "Handle WebSocket connection and reconnection",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 7,
+            "title": "Implement fit addon",
+            "description": "Auto-resize terminal to fit container",
+            "status": "pending",
+            "dependencies": [
+              1
+            ],
+            "parentId": "undefined"
+          }
+        ],
+        "testStrategy": "Visual testing, ANSI rendering tests, interaction tests",
+        "details": "Font: JetBrains Mono 14px. Scrollback: 10000 lines."
+      },
+      {
+        "id": 11,
+        "title": "Phase 2 Days 6-7: Terminal Integration & Testing",
+        "description": "Integrate terminal into main layout and perform comprehensive testing",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          "10"
+        ],
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Update layout for terminal",
+            "description": "Add terminal to center panel (60% width)",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 2,
+            "title": "Implement watch/interactive mode toggle",
+            "description": "Switch between read-only and interactive modes",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Test terminal performance",
+            "description": "Verify handles 1000+ lines without lag",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 4,
+            "title": "Test terminal latency",
+            "description": "Measure and optimize to < 100ms",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 5,
+            "title": "Test session persistence",
+            "description": "Verify reconnection after page refresh",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 6,
+            "title": "Deploy Phase 2 to Replit",
+            "description": "Ship terminal viewer feature",
+            "status": "pending",
+            "dependencies": [
+              3,
+              4,
+              5
+            ],
+            "parentId": "undefined"
+          }
+        ],
+        "testStrategy": "Performance benchmarks, latency testing, stability tests",
+        "details": "Phase 2 milestone: Real-time terminal streaming"
+      },
+      {
+        "id": 12,
+        "title": "Phase 3 Week 5: File Tree Navigation",
+        "description": "Implement file tree with git status and navigation",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          "11"
+        ],
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Install file system dependencies",
+            "description": "Install chokidar for file watching",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 2,
+            "title": "Create FileService",
+            "description": "Implement recursive directory traversal",
+            "status": "pending",
+            "dependencies": [
+              1
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Add file watching",
+            "description": "Watch for file system changes with chokidar",
+            "status": "pending",
+            "dependencies": [
+              2
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 4,
+            "title": "Create FileTree component",
+            "description": "Recursive tree with expand/collapse",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 5,
+            "title": "Create FileNode component",
+            "description": "Individual file/folder with icons",
+            "status": "pending",
+            "dependencies": [
+              4
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 6,
+            "title": "Add virtual scrolling",
+            "description": "Support 10,000+ files with @tanstack/react-virtual",
+            "status": "pending",
+            "dependencies": [
+              4
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 7,
+            "title": "Create FileSearch component",
+            "description": "Fuzzy file search (Ctrl+P style)",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 8,
+            "title": "Integrate git status indicators",
+            "description": "Show modified/untracked/staged status on files",
+            "status": "pending",
+            "dependencies": [
+              5
+            ],
+            "parentId": "undefined"
+          }
+        ],
+        "testStrategy": "Performance testing with large repos, file watching tests",
+        "details": "Left panel, 20% width. Lazy load directories."
+      },
+      {
+        "id": 13,
+        "title": "Phase 3 Week 5-6: Git Dashboard Integration",
+        "description": "Implement git status, commits, and diff viewing",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          "12"
+        ],
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Install simple-git dependency",
+            "description": "Add simple-git package for git operations",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 2,
+            "title": "Create GitService",
+            "description": "Implement git status, commits, and diff retrieval",
+            "status": "pending",
+            "dependencies": [
+              1
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Create git API endpoints",
+            "description": "GET /api/git/status, /api/git/commits, /api/git/diff",
+            "status": "pending",
+            "dependencies": [
+              2
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 4,
+            "title": "Create GitDashboard component",
+            "description": "Main git panel in sidebar",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 5,
+            "title": "Create GitStatus component",
+            "description": "Show branch, ahead/behind, changes count",
+            "status": "pending",
+            "dependencies": [
+              4
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 6,
+            "title": "Create CommitHistory component",
+            "description": "Display recent commits with details",
+            "status": "pending",
+            "dependencies": [
+              4
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 7,
+            "title": "Implement diff viewer",
+            "description": "Show file diffs in modal",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 8,
+            "title": "Add real-time git status updates",
+            "description": "Update git status within 1s of file changes",
+            "status": "pending",
+            "dependencies": [
+              5
+            ],
+            "parentId": "undefined"
+          }
+        ],
+        "testStrategy": "Test with real git repos, verify status accuracy",
+        "details": "Sidebar panel with tabs. Poll git status every 2-3 seconds."
+      },
+      {
+        "id": 14,
+        "title": "Phase 3 Week 6-7: MCP Server Manager",
+        "description": "Implement MCP server discovery, status, and management",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          "13"
+        ],
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create MCPService",
+            "description": "Read .mcp.json and manage server processes",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 2,
+            "title": "Implement server status checking",
+            "description": "Check if MCP server processes are running",
+            "status": "pending",
+            "dependencies": [
+              1
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Implement server start/stop",
+            "description": "Spawn and kill MCP server child processes",
+            "status": "pending",
+            "dependencies": [
+              1
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 4,
+            "title": "Implement tool discovery",
+            "description": "Query MCP servers for available tools",
+            "status": "pending",
+            "dependencies": [
+              1
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 5,
+            "title": "Create MCP API endpoints",
+            "description": "GET /api/mcp/servers, POST /api/mcp/servers/:name/start",
+            "status": "pending",
+            "dependencies": [
+              1
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 6,
+            "title": "Create MCPManager component",
+            "description": "List of all MCP servers with status",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 7,
+            "title": "Create ServerCard component",
+            "description": "Individual server with status and actions",
+            "status": "pending",
+            "dependencies": [
+              6
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 8,
+            "title": "Create ToolsList modal",
+            "description": "Show all tools provided by a server",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 9,
+            "title": "Implement server logs viewer",
+            "description": "Stream and display server logs",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          }
+        ],
+        "testStrategy": "Test with multiple MCP servers, verify start/stop functionality",
+        "details": "Sidebar panel with tabs. Auto-refresh status every 5 seconds."
+      },
+      {
+        "id": 15,
+        "title": "Phase 3 Week 7: Three-Panel Layout Integration",
+        "description": "Integrate file tree, terminal, and sidebar into cohesive layout",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          "12",
+          "13",
+          "14"
+        ],
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Update MainLayout for three panels",
+            "description": "20% file tree | 60% terminal | 20% sidebar",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 2,
+            "title": "Add panel resizing",
+            "description": "Allow users to resize panels with drag handles",
+            "status": "pending",
+            "dependencies": [
+              1
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Implement sidebar tabs",
+            "description": "Switch between Git, MCP, Issues, Tasks in sidebar",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 4,
+            "title": "Add panel collapse/expand",
+            "description": "Toggle panels to maximize workspace",
+            "status": "pending",
+            "dependencies": [
+              1
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 5,
+            "title": "Update responsive behavior",
+            "description": "Handle three panels on tablet/mobile",
+            "status": "pending",
+            "dependencies": [
+              1
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 6,
+            "title": "Test layout on all screen sizes",
+            "description": "Verify usability on desktop, tablet, mobile",
+            "status": "pending",
+            "dependencies": [
+              5
+            ],
+            "parentId": "undefined"
+          }
+        ],
+        "testStrategy": "Visual testing, usability testing, responsive design tests",
+        "details": "Use react-resizable-panels for panel management"
+      },
+      {
+        "id": 16,
+        "title": "Phase 3 Week 8: Polish, Testing & Documentation",
+        "description": "Final polish, comprehensive testing, and complete documentation",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          "15"
+        ],
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Implement dark mode throughout",
+            "description": "Apply Tokyo Night theme to all new components",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 2,
+            "title": "Performance optimization",
+            "description": "Code splitting, lazy loading, bundle optimization",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Add error boundaries",
+            "description": "Graceful error handling for all panels",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 4,
+            "title": "Implement loading states",
+            "description": "Skeleton screens for all async operations",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 5,
+            "title": "Write comprehensive E2E tests",
+            "description": "Test all critical user flows with Playwright",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 6,
+            "title": "Performance benchmarking",
+            "description": "Verify all performance requirements met",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 7,
+            "title": "Security audit",
+            "description": "Review for XSS, CSRF, injection vulnerabilities",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 8,
+            "title": "Write complete user documentation",
+            "description": "User guide covering all features with screenshots",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 9,
+            "title": "Write API documentation",
+            "description": "Complete API reference with examples",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 10,
+            "title": "Create deployment guides",
+            "description": "Document Replit, Docker, and VPS deployment",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          }
+        ],
+        "testStrategy": "Full test suite, security audit, performance benchmarks, 8-hour stability test",
+        "details": "Verify all Phase 3 success criteria before shipping"
+      },
+      {
+        "id": 17,
+        "title": "Phase 3: Deploy Full Dashboard & Ship v1.0",
+        "description": "Deploy complete dashboard to production",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          "16"
+        ],
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Final production testing",
+            "description": "Smoke tests on all features in production environment",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 2,
+            "title": "Create Docker image",
+            "description": "Build and test Docker container",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 3,
+            "title": "Deploy to Replit",
+            "description": "Update production deployment with all features",
+            "status": "pending",
+            "dependencies": [],
+            "parentId": "undefined"
+          },
+          {
+            "id": 4,
+            "title": "Tag v1.0 release",
+            "description": "Create git tag and GitHub release",
+            "status": "pending",
+            "dependencies": [
+              3
+            ],
+            "parentId": "undefined"
+          },
+          {
+            "id": 5,
+            "title": "Announce v1.0 release",
+            "description": "Share with community, gather feedback",
+            "status": "pending",
+            "dependencies": [
+              4
+            ],
+            "parentId": "undefined"
+          }
+        ],
+        "testStrategy": "Production smoke tests, rollback plan prepared",
+        "details": "Phase 3 milestone: Complete IDE replacement dashboard"
+      }
+    ],
+    "metadata": {
+      "version": "1.0.0",
+      "lastModified": "2025-11-12T18:45:50.311Z",
+      "taskCount": 17,
+      "completedCount": 7,
+      "tags": [
+        "master"
+      ],
+      "created": "2025-11-12T18:50:16.839Z",
+      "description": "Tasks for master context",
+      "updated": "2025-11-12T18:50:16.839Z"
+    }
+  }
+}

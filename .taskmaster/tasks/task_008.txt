@@ -1,0 +1,37 @@
+# Task ID: 8
+# Title: Phase 1: Deploy to Replit & Ship MVP
+# Status: pending
+# Dependencies: 7
+# Priority: high
+# Description: Deploy Phase 1 to Replit and ship to users
+# Details:
+Phase 1 milestone: Working task viewer + issue tracker
+
+# Test Strategy:
+Production deployment testing, smoke tests
+
+# Subtasks:
+## 1. Configure Replit deployment [pending]
+### Dependencies: None
+### Description: Set environment variables in Replit Secrets
+### Details:
+
+
+## 2. Test deployment on Replit [pending]
+### Dependencies: 8.1
+### Description: Verify all features work in production
+### Details:
+
+
+## 3. Create deployment documentation [pending]
+### Dependencies: None
+### Description: Document deployment process for future updates
+### Details:
+
+
+## 4. Announce Phase 1 release [pending]
+### Dependencies: 8.2
+### Description: Share with users, gather feedback
+### Details:
+
+
