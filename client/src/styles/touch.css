@@ -1,0 +1,106 @@
+/**
+ * Touch-Specific Styles
+ *
+ * Optimizes interactions for touch devices:
+ * - Removes hover effects on touch-only devices
+ * - Adds active/pressed states for visual feedback
+ * - Controls tap highlight color
+ * - Improves scroll performance
+ */
+
+/* Remove tap highlight on iOS Safari */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Touch-only devices: remove hover effects */
+@media (hover: none) and (pointer: coarse) {
+  /* Remove hover states from cards */
+  .task-card:hover,
+  .issue-card:hover {
+    box-shadow: none;
+  }
+
+  /* Remove hover states from buttons */
+  button:hover {
+    background-color: inherit;
+  }
+}
+
+/* Touch devices: add active/pressed states */
+@media (hover: none) and (pointer: coarse) {
+  /* Card active states */
+  .task-card:active,
+  .issue-card:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease-out;
+  }
+
+  /* Button active states */
+  button:active {
+    transform: scale(0.95);
+    opacity: 0.8;
+    transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+  }
+
+  /* Link active states */
+  a:active {
+    opacity: 0.7;
+    transition: opacity 0.1s ease-out;
+  }
+}
+
+/* Optimize scroll performance on touch devices */
+@media (hover: none) {
+  .scroll-container {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+  }
+}
+
+/* Pull-to-refresh indicator */
+.pull-to-refresh-indicator {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  pointer-events: none;
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.pull-to-refresh-indicator.hidden {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-20px);
+}
+
+/* Ripple effect for touch feedback */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.touch-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background-color: currentColor;
+  animation: ripple 0.6s ease-out;
+  pointer-events: none;
+}
+
+/* Prevent text selection on interactive elements (touch devices) */
+@media (hover: none) {
+  button,
+  .task-card,
+  .issue-card,
+  [role="button"] {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}

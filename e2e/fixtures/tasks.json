@@ -1,0 +1,76 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": "1",
+        "title": "Setup project infrastructure",
+        "description": "Initialize project with necessary tooling",
+        "status": "done",
+        "priority": "high",
+        "dependencies": [],
+        "details": "Completed setup of development environment",
+        "testStrategy": "Manual verification",
+        "subtasks": []
+      },
+      {
+        "id": "2",
+        "title": "Implement authentication",
+        "description": "Add user authentication system",
+        "status": "in-progress",
+        "priority": "high",
+        "dependencies": ["1"],
+        "details": "Working on JWT token implementation",
+        "testStrategy": "Unit tests for auth functions",
+        "subtasks": [
+          {
+            "id": "2.1",
+            "title": "Create login endpoint",
+            "description": "API endpoint for user login",
+            "status": "done",
+            "priority": "high"
+          },
+          {
+            "id": "2.2",
+            "title": "Implement JWT tokens",
+            "description": "Generate and validate JWT tokens",
+            "status": "in-progress",
+            "priority": "high"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Build dashboard UI",
+        "description": "Create main dashboard interface",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": ["2"],
+        "details": "Needs authentication to be completed first",
+        "testStrategy": "E2E tests with Playwright",
+        "subtasks": []
+      },
+      {
+        "id": "4",
+        "title": "API documentation",
+        "description": "Document all API endpoints",
+        "status": "pending",
+        "priority": "low",
+        "dependencies": [],
+        "details": "Use OpenAPI specification",
+        "testStrategy": "Manual review",
+        "subtasks": []
+      },
+      {
+        "id": "5",
+        "title": "Deploy to production",
+        "description": "Set up production deployment",
+        "status": "blocked",
+        "priority": "high",
+        "dependencies": ["2", "3"],
+        "details": "Blocked until dashboard is complete",
+        "testStrategy": "Smoke tests in production",
+        "subtasks": []
+      }
+    ]
+  }
+}
