@@ -30,35 +30,6 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
-    // Performance optimization
-    rollupOptions: {
-      output: {
-        // Manual chunking for better caching and code splitting
-        manualChunks: {
-          // Vendor chunk for React and core dependencies
-          'vendor-react': ['react', 'react-dom', 'react/jsx-runtime'],
-          // Routing and state management
-          'vendor-routing': ['wouter', '@tanstack/react-query'],
-          // Radix UI primitives (heavy dependency)
-          'vendor-radix': [
-            '@radix-ui/react-dialog',
-            '@radix-ui/react-popover',
-            '@radix-ui/react-select',
-            '@radix-ui/react-checkbox',
-          ],
-          // Form libraries
-          'vendor-forms': [
-            'react-hook-form',
-            '@hookform/resolvers',
-            'zod',
-          ],
-        },
-      },
-    },
-    // Target modern browsers for smaller bundle
-    target: 'es2020',
-    // Increase chunk size warning limit (we're code splitting)
-    chunkSizeWarningLimit: 600,
   },
   server: {
     fs: {
