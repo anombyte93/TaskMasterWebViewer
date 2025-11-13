@@ -554,16 +554,17 @@
             "id": 4,
             "title": "Announce Phase 1 release",
             "description": "Share with users, gather feedback",
-            "status": "pending",
+            "status": "done",
             "dependencies": [
               2
             ],
-            "parentId": "undefined"
+            "parentId": "undefined",
+            "updatedAt": "2025-11-13T14:59:04.937Z"
           }
         ],
         "testStrategy": "Production deployment testing, smoke tests",
         "details": "Phase 1 milestone: Working task viewer + issue tracker",
-        "updatedAt": "2025-11-13T14:56:43.094Z"
+        "updatedAt": "2025-11-13T14:59:04.937Z"
       },
       {
         "id": "9",
@@ -1281,7 +1282,7 @@
     ],
     "metadata": {
       "version": "1.0.0",
-      "lastModified": "2025-11-13T14:56:43.095Z",
+      "lastModified": "2025-11-13T14:59:04.937Z",
       "taskCount": 17,
       "completedCount": 7,
       "tags": [
